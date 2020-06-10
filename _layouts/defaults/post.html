@@ -10,19 +10,18 @@ layout: default
     {% include components/post-meta.html %}
 </div>
 
-<small>
-    <div class="d-flex flex-wrap align-items-center">
-        <span class="icon grey mr-2 mb-2">
-            {%include entypo/price-tag.svg %}
-        </span>
+<div class="d-flex align-items-center mb-2">
+    <span class="icon grey mr-2 mb-1">
+        {% include entypo/price-tag.svg %}
+    </span>
+    <div>
         {% for tag in page.tags %}
-        <a href="{% link list/posts.html %}#{{ tag | slugify }}" class="mr-2 mb-2 d-inline-block">
-            {{ tag }}
-        </a>
+            <a href="{% link list/posts.html %}#{{ tag | slugify }}" class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
+                {{ tag }}
+            </a>
         {% endfor %}
-
     </div>
-</small>
+</div>
 {{ content }}
 
 
