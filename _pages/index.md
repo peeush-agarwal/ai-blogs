@@ -2,14 +2,14 @@
 layout: defaults/page
 permalink: index.html
 narrow: true
-title: Welcome to Friday Theme
+title: Home
 ---
 
 ## What is it?
 
 {% include components/intro.md %}
 
-[Here's the full feature list and some quick examples of what it can do.]({{ site.baseurl}}{% link _pages/about.md %})
+[Here's the full feature list and some quick examples of what it can do.]({% link _pages/about.md %})
 
 ## How to use it
 
@@ -26,5 +26,3 @@ This web site is the documentation for the theme and also provides examples of h
 {% for post in site.posts limit:3 %}
 {% include components/post-card.html %}
 {% endfor %}
-
-
