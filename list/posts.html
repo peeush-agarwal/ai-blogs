@@ -53,13 +53,13 @@ permalink: list/posts.html
         $("#currently-showing").show()
         $(".card-post").hide()
         $(".tag").removeClass("bg-warning")
-            .addClass("bg-white")
+            .addClass("bg-transparent")
             .removeClass("text-dark")
         $(".card-post").each(function(idx, card) {
             var matches = $(card).find(".tag-" + tag)
             if (matches.length > 0) $(card).show()
         })
-        $(".tag-" + tag).removeClass("bg-white")
+        $(".tag-" + tag).removeClass("bg-transparent")
             .addClass("bg-warning")
             .addClass("text-dark")
             .blur()
@@ -70,7 +70,7 @@ permalink: list/posts.html
         $("#currently-showing").hide()
         $(".card-post").show()
         $(".tag").removeClass("bg-warning")
-            .addClass("bg-white")
+            .addClass("bg-transparent")
             .removeClass("text-dark")
         document.location.hash = ""
     }
