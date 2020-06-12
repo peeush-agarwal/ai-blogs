@@ -16,7 +16,7 @@ layout: default
     </span>
     <div>
         {% for tag in page.tags %}
-            <a href="{% link list/posts.html %}#{{ tag | slugify }}" class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
+            <a href="{{ site.baseurl }}{% link list/posts.html %}#{{ tag | slugify }}" class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
                 {{ tag }}
             </a>
         {% endfor %}
