@@ -3,7 +3,6 @@ title: Deep Learning with OpenCV
 tags:
   - open-cv
   - deep-learning
-image: assets/images/pic08.jpg
 ---
 
 Deep learning with OpenCV using its inbuilt `dnn` module
@@ -42,7 +41,7 @@ For this example, we'll use:
 + Caffe framework
 + GoogleLeNet _or [Inception](https://arxiv.org/abs/1409.4842)_ (pre-trained on ImageNet) network
 
-Let's learn how we can load a pre-trained Caffe model and use it to classify an image using OpenCV.
+To learn more about how we load a pre-trained Caffe model and use it to classify an image using OpenCV, follow [this]({{ site.baseurl }}{% link _posts/2020-06-13-image-classification-opencv.md %}).
 
 ## Object Detection
 
