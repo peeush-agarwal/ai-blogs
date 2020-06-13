@@ -1,18 +1,14 @@
-# Friday Theme
+# Portfolio and blogs
 
-## A Bootstrap 4 portfolio and blog theme for Jekyll
+This repo is used to maintain [AI-Blogs](https://peeush-agarwal.github.io/ai-blogs/) static website to showcase my blogs and projects related to:
 
-* Example 1: This repo builds directly to GitHub pages, which is also the documentation:  https://sfreytag.github.io/friday-theme/
-* Example 2: my own homepage, http://www.freytag.org.uk
++ Deep learning
++ Computer vision
 
-## Get Started
+## Theme
 
-Follow the [install notes](https://sfreytag.github.io/friday-theme/projects/install.html).
+I'm using Jekyll and Github pages to build and maintain the website. Thanks to [Simon Freytag](http://www.freytag.org.uk) who've written wonderful and easy to use Bootstrap 4 Theme. [Link](https://sfreytag.github.io/friday-theme/)
 
 ## Usage
 
-The theme is free to use, but if you do use it, it would be great to hear from you. Email simon@freytag.org.uk - thanks!
-
-## Jekyll Version
-
-__Watch out!__ This theme uses {{site.baseurl}} throughout, so is not currently suitable for Jekyll 4. It works well with 3.8.5 and works well with GitHub Pages.
+The repo is free to use, but if you do use it, it would be great to hear from you. [Email me](mailto:agarwal.peeush@gmail.com) - thanks!

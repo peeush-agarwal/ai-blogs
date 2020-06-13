@@ -7,13 +7,14 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            Friday Theme            # Site title
-name:             Friday Theme            # Your name
-avatar:           /theme/img/avatar.jpg   # Path to an avatar image
+title:            Into The AI                # Site title
+name:             Peeush Agarwal             # Your name
+avatar:           /theme/img/avatar.jpg      # Path to an avatar image
 
 # The theme uses the baseurl throughout, which is useful for running the entire
 # site under a subdir, like for this GitHub Pages deployment as a project site.
-baseurl: "/friday-theme"
+baseurl: "/ai-blogs"
+# url: # the base hostname & protocol for your site
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
 include: ["_pages", "_portfolio"]
