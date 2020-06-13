@@ -11,10 +11,11 @@
 // Include Bootswatch-bootswatch
 @import "bootswatch/bootswatch";
 
+// Include comments
+@import "comments";
+
 // Include SCSS for the theme itself.
 @import 'theme';
-
-// @import 'dark_theme';
 
 .highlighter-rouge 
 { 

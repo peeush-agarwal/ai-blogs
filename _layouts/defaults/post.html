@@ -16,22 +16,27 @@ layout: default
     </span>
     <div>
         {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}{% link list/posts.html %}#{{ tag | slugify }}" class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
-                {{ tag }}
-            </a>
+        <a href="{{ site.baseurl }}{% link list/posts.html %}#{{ tag | slugify }}"
+            class="d-inline-block border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify}}">
+            {{ tag }}
+        </a>
         {% endfor %}
     </div>
 </div>
 {{ content }}
 
+{% if page.comments_id %}
+{% include components/comments.html %}
+{% endif %}
+
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        var tpl = 
+    $(document).ready(function () {
+        var tpl =
             "<li class='nav-item'>\
                 <a class='nav-link mb-1' href='#header[idx]'>[name]</a>\
             </li>"
-        $("h2").each(function(idx, h2) {
+        $("h2").each(function (idx, h2) {
             $(h2).attr("id", "header" + idx)
             var name = $(h2).text().trim()
             var dom_string = tpl.replace("[name]", name).replace("[idx]", idx)

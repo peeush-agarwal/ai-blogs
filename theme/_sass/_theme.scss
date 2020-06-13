@@ -24,6 +24,10 @@
     fill: #A00;
 }
 
+.icon.primary svg path {
+    fill: $primary;
+}
+
 .list-title {
     text-transform: uppercase;
     font-weight: 300;

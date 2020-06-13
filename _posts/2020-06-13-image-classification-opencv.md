@@ -9,6 +9,7 @@ tags:
   - open-cv
   - deep-learning
   - image-classification
+comments_id: 1
 ---
 
 In [Deep Learning with OpenCV]({{ site.baseurl }}{% link _posts/2020-06-01-deep-learning-with-opencv.md %}) blog, we talked about using pre-trained model provided in OpenCV 3.3 to classify images or even videos(real-time webcams, video files, etc.). In this blog, we'll deep-dive into image classification using OpenCV and GoogleLeNet (pre-trained on ImageNet) using the Caffe framework.
@@ -165,7 +166,7 @@ python image_classification.py --image {Path to image} --prototxt {Path to .prot
 
 ### Results
 
-<div class="card-group">
+<div class="card-group mb-2">
     {% for img in page.images %}
     <div class="card">
         <div class="card-header">
