@@ -1,12 +1,14 @@
 ---
 title: Introduction to probability
+tags:
+  - statistics
 mathjax: true
 # prev_post: 
 #   url: 2020-06-13-image-classification-opencv.md
 #   title: Image classification using OpenCV
 next_post: 
-  url: 2020-06-01-deep-learning-with-opencv.md
-  title: Deep Learning with OpenCV
+  url: 2020-06-18-joint-and-cond-probability.md
+  title: Joint and conditional probabilities
 ---
 
 ### Definition
@@ -15,6 +17,8 @@ next_post:
 + It ranges between 0 and 1.
 + `0` = impossible event.
 + `1` = certain event.
+
+<!--more-->
 
 ### Terminology
 
@@ -36,10 +40,10 @@ __Important points to remember:__
 
 + Tossing a coin
   + Possible outcomes: `H`, `T` _(2 in total)_
-  + Probability of getting either `H` or `T` is equal to $\dfrac{1}{2}$
+  + Probability of getting either `H` or `T` is equal to $$ \dfrac{1}{2} $$
 + Throwing/Rolling a dice
   + Possible outcomes: `1`, `2`, `3`, `4`, `5`, `6` _(6 in total)_
-  + Probability of the occurence of any number is $\dfrac{1}{6}$
+  + Probability of the occurence of any number is $$ \dfrac{1}{6} $$
 + Pick a card from deck of cards
   + Possible outcomes: _(52 in total)_
     + `13` cards of hearts
