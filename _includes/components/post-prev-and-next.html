@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between border-top border-bottom border-light mb-2 p-1">
+    {% if page.prev_post %}
+    <a class="" href="{{ site.baseurl }}{% link _posts/{{ page.prev_post.url }} %}">&lt;{{ page.prev_post.title }}</a>
+    {% else %}
+    <span class="text-muted">&lt;Previous</span>
+    {% endif %}
+    {% if page.next_post %}
+    <a class="ml-auto" href="{{ site.baseurl }}{% link _posts/{{ page.next_post.url }} %}">{{ page.next_post.title }}&gt;</a>
+    {% else %}
+    <span class="text-muted">Next&gt;</span>
+    {% endif %}
+</div>

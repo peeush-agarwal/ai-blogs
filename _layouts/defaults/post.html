@@ -23,7 +23,16 @@ layout: default
         {% endfor %}
     </div>
 </div>
+
+{% if page.prev_post or page.next_post %}
+{% include components/post-prev-and-next.html %}
+{% endif %}
+
 {{ content }}
+
+{% if page.prev_post or page.next_post %}
+{% include components/post-prev-and-next.html %}
+{% endif %}
 
 {% if page.comments_id %}
 {% include components/comments.html %}
@@ -36,9 +45,17 @@ layout: default
             "<li class='nav-item'>\
                 <a class='nav-link mb-1' href='#header[idx]'>[name]</a>\
             </li>"
-        $("h2").each(function (idx, h2) {
-            $(h2).attr("id", "header" + idx)
-            var name = $(h2).text().trim()
+        var selectors = ["h2", "h3", "h4"];
+        var selector = selectors[0];
+        for (selectorElem of selectors){
+            if($(selectorElem).length){
+                selector = selectorElem;
+                break;
+            }
+        }
+        $(selector).each(function (idx, elem) {
+            $(elem).attr("id", "header" + idx)
+            var name = $(elem).text().trim()
             var dom_string = tpl.replace("[name]", name).replace("[idx]", idx)
             var header = $(dom_string)
             $(".header-list").append(header)
