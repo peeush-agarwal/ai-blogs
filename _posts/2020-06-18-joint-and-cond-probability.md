@@ -6,9 +6,9 @@ mathjax: true
 prev_post: 
   url: 2020-06-16-intro-to-probability.md
   title: Introduction to probability
-# next_post: 
-#   url: 2020-06-01-deep-learning-with-opencv.md
-#   title: Deep Learning with OpenCV
+next_post: 
+  url: 2020-06-18-probability-distributions.md
+  title: Probability distributions
 ---
 
 ## Joint probability
@@ -60,3 +60,12 @@ __Soln.__ The probability of another spade from the deck would be $$ \dfrac{12}{
 __Ques.__ A bag contains `4` red balls and `5` green balls. You draw a ball from it without replacing it with another one. What is the probability of you drawing a green ball in the second draw, provided that it was a red ball that you got in the first draw?  
 __Soln.__ $$ \text{The probability of red ball} = \dfrac{4}{9} $$. Now the probability of ball being green in second draw $$= \dfrac{5}{8} $$.
 
+## Baye's Theorem
+
+This describes the probability of an event, based on prior knowledge of conditions that might be related to the event. If you know the Conditional probability $$ P(A \vert B) $$, you can use Baye's rule to find out the reverse probability $$ P(B \vert A) $$.
+
+$$ P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)} $$
+
+__Generic formula__
+
+$$ P(A_i \vert B) = \frac{P(B \vert A_i) \cdot P(A_i)}{\sum_{i=1}^{n}P(B \vert A_i) \cdot P(A_i)} $$
