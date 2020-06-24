@@ -3,12 +3,8 @@ title: Introduction to probability
 tags:
   - statistics
 mathjax: true
-# prev_post: 
-#   url: 2020-06-13-image-classification-opencv.md
-#   title: Image classification using OpenCV
 next_post: 
-  url: 2020-06-18-joint-and-cond-probability.md
-  title: Joint and conditional probabilities
+  title: Joint probability and conditional probablity
 ---
 
 ### Definition

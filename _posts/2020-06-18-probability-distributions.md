@@ -4,8 +4,7 @@ tags:
   - statistics
 mathjax: true
 prev_post: 
-  url: 2020-06-18-joint-and-cond-probability.md
-  title: Joint and conditional probabilities
+  title: Joint probability and conditional probablity
 # next_post: 
 #   url: 2020-06-01-deep-learning-with-opencv.md
 #   title: Deep Learning with OpenCV

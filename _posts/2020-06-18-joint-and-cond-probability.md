@@ -4,10 +4,8 @@ tags:
   - statistics
 mathjax: true
 prev_post: 
-  url: 2020-06-16-intro-to-probability.md
   title: Introduction to probability
 next_post: 
-  url: 2020-06-18-probability-distributions.md
   title: Probability distributions
 ---
 

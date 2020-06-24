@@ -1,11 +1,25 @@
 <div class="d-flex justify-content-between border-top border-bottom border-light mb-2 p-1">
+    {% for post in site.posts %}
     {% if page.prev_post %}
-    <a class="" href="{{ site.baseurl }}{% link _posts/{{ page.prev_post.url }} %}">&lt;{{ page.prev_post.title }}</a>
+    {% if post.title == page.prev_post.title %}
+    {% capture prev_url %}{{ post.url }}{% endcapture %}
+    {% endif %}
+    {% endif %}
+    {% if page.next_post %}
+    {% if post.title == page.next_post.title %}
+    {% capture next_url %}{{ post.url }}{% endcapture %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    {% if prev_url %}
+    <a class="" href="{{ site.baseurl }}{{ prev_url }}">&lt;{{ page.prev_post.title }}</a>
     {% else %}
     <span class="text-muted">&lt;Previous</span>
     {% endif %}
-    {% if page.next_post %}
-    <a class="ml-auto" href="{{ site.baseurl }}{% link _posts/{{ page.next_post.url }} %}">{{ page.next_post.title }}&gt;</a>
+
+    {% if next_url %}
+    <a class="ml-auto" href="{{ site.baseurl }}{{ next_url }}">{{ page.next_post.title }}&gt;</a>
     {% else %}
     <span class="text-muted">Next&gt;</span>
     {% endif %}
