@@ -5,9 +5,8 @@ tags:
 mathjax: true
 prev_post: 
   title: Joint probability and conditional probablity
-# next_post: 
-#   url: 2020-06-01-deep-learning-with-opencv.md
-#   title: Deep Learning with OpenCV
+next_post: 
+   title: Normal distribution
 ---
 
 ## Random variable
