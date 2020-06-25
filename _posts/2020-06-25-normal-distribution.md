@@ -5,8 +5,8 @@ tags:
 mathjax: true
 prev_post: 
   title: Probability distributions
-# next_post: 
-#    title: Normal distribution
+next_post: 
+   title: Inferential statistics
 ---
 
 + A normal distribution curve is a type of probability distribution for continuous random variables.
