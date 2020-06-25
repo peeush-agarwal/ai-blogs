@@ -2,6 +2,5 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|ai_blogs| "https://github.com/#{ai_blogs}" }
-
 gem "github-pages", group: :jekyll_plugins
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
