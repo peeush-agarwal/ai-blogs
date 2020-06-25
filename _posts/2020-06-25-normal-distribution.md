@@ -17,6 +17,9 @@ prev_post:
   + It is symmetrical on both sides of its mean $$ \mu $$
   + The mean lies at the middle of the curve. `Mean = Median = Mode`
   + The total area under the curve is equal to `1` (since it is probability density function)
+  
+<!--more-->
+
 + Probability density function for Normal distribution is:  
   $$
   \begin{align*}
