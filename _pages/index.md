@@ -3,6 +3,7 @@ layout: defaults/page
 permalink: index.html
 narrow: true
 title: Hi...
+mathjax: true
 ---
 
 {% include components/intro.md %}
