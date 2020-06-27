@@ -64,9 +64,9 @@ It is the probability distribution of a particular sample statistic (such as mea
 + Types of Estimation:
   + __Point estimate__: Here, a statistic obtained from the sample is used to estimate a population parameter. Its accuracy depend on how well the sample represents the population. The population parameters derived from sample statistics of various samples may vary. This is why _interval estimate_ is preferred.
   + __Interval estimate__: Here, the lower and upper limits of the values within which a population parameter will lie are estimated with a certain level of confidence.
-+ From above definition of Interval estimate, following equation can be derived:
++ From above definition of Interval estimate, following equation can be derived:  
   $$ \widetilde{x} - Z \cdot \dfrac{\alpha}{2} \cdot \dfrac{\sigma}{\sqrt{n}} < \mu <  \widetilde{x} + Z \cdot \dfrac{\alpha}{2} \cdot \dfrac{\sigma}{\sqrt{n}} $$  
-  Here, $$ \alpha $$ is the level of significance which is business dependent.
+  Here, $$ \alpha $$ is the level of significance which is business dependent.  
   ![Interval Estimate Z-score]({{ site.baseurl }}{% link assets/images/probability_dist/interval_estimate_Z_score.png %})
 + The formula above is used to calculate the upper and the lower limits of $$ \mu $$ for a certain level of confidence (a certain value of Z), where the value of $$ \sigma $$ is known. What if the value of $$ \sigma $$ is not known? In that case, you use the `t-distribution`.
 

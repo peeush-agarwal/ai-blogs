@@ -113,7 +113,7 @@ next_post:
   + $$ \lambda $$ = average
 + Example:
   Suppose that, in a shop, customers arrive randomly on weekdays at an average of 5 customers every hour. What is the probability that exactly 8 customers will arrive in an hour on a weekday?
-  Here,
+  Here,  
     $$ \lambda = 5 $$  
     $$ x = 8 $$  
     $$ P(x = 8) = \dfrac{5^8 \cdot e^{-5}}{8!} $$  
