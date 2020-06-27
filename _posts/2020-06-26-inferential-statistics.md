@@ -21,6 +21,8 @@ prev_post:
   Mean | $$ \widetilde{x} $$ | $$ \mu $$
   Standard Deviation | s | $$ \sigma $$
 
+<!--more-->
+
 ### Types of Sampling
 
 + __Random sampling__: In this type of sampling, each element in the population has same probability of getting selected in the sample.
