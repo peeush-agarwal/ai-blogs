@@ -1,0 +1,38 @@
+---
+---
+
+// Customise bootstrap, and set site-wide variables.
+@import 'print_variables';
+
+// Include Bootswatch-variables {Note order is important: [Bootswatch-variables, bootstrap, Bootswatch-bootswatch]}
+@import "bootswatch/variables";
+// Include Bootstrap.
+@import 'bootstrap/bootstrap';
+// Include Bootswatch-bootswatch
+@import "bootswatch/bootswatch";
+
+// Include SCSS for the theme itself.
+@import 'theme';
+
+@import 'syntax_light';
+
+.highlighter-rouge 
+{
+    //background-color: $body-bg;
+    //border: 1px solid $black;
+    padding: 3px 5px;
+    border-radius: 2px;
+    color: $black;
+    filter: saturate(0.5);
+    font-weight: bold;
+}
+
+pre,
+blockquote {
+  border: 0;
+  padding: 5px;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+}
