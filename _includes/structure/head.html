@@ -2,22 +2,23 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
 
     <title>
         {% if page.title %}
-            {{ page.title }} &middot; {{ site.title }}
+        {{ page.title }} &middot; {{ site.title }}
         {% else %}
-            {{ site.title }}
+        {{ site.title }}
         {% endif %}
     </title>
 
     <script src="{{ site.baseurl }}/theme/js/jquery-3.4.1.min.js"></script>
     <script src="{{ site.baseurl }}/theme/js/bootstrap-4.4.1.bundle.min.js"></script>
-    
+
     {% if page.mathjax  %}
-    <script type="text/javascript" async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script type="text/javascript" async
+        src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     {% endif %}
 
     <link rel="stylesheet" href="{{ site.baseurl }}/theme/css/site.css">

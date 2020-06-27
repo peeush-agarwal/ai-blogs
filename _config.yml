@@ -11,6 +11,8 @@ title:            Into The AI                # Site title
 name:             Peeush Agarwal             # Your name
 avatar:           /theme/img/avatar.jpg      # Path to an avatar image
 nav_icon:         /theme/img/favicon.ico     # Path to nav-brand icon
+author:           Peeush Agarwal             # Your name
+description:      "Blogs and projects related to Machine learning, Deep learning or AI"
 
 # The theme uses the baseurl throughout, which is useful for running the entire
 # site under a subdir, like for this GitHub Pages deployment as a project site.
