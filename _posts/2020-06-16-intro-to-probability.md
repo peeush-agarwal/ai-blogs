@@ -30,7 +30,7 @@ next_post:
 
 ### Formula
 
-$$ probability = \frac{\text{ No. of favorable outcomes}}{\text{ Total number of possible outcomes}} $$
+$$ probability = \frac{\text{No. of favorable outcomes}}{\text{Total no. of possible outcomes}} $$
 
 __Important points to remember:__
 

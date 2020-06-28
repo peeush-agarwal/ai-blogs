@@ -5,11 +5,11 @@ permalink: list/posts.html
 mathjax: true
 ---
 
-<div class="d-md-block d-lg-none mb-3">
+<div class="d-md-block d-lg-none d-print-none mb-3">
     {% include components/all-tags.html %}
 </div>
 
-<div id="currently-showing">
+<div id="currently-showing" class="d-print-none">
     <h4 class="d-flex align-items-center mb-3">
         <span class="text-light mr-2">Showing everything matching:</span>
         <span class="border rounded pl-2 pr-2 pb-1 mr-2 bg-warning text-dark" id="active-tag"></span>
@@ -23,7 +23,10 @@ mathjax: true
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 
     {% if year != written_year %}
-        <h5 class="text-light mt-4 mb-2 p-2 bg-dark rounded" id="{{ year | slugify }}">
+        <h5 class="d-print-none text-light mt-4 mb-2 p-2 bg-dark rounded" id="{{ year | slugify }}">
+            {{ year }}
+        </h5>
+        <h5 class="d-none d-print-block mt-4 mb-2" id="{{ year | slugify }}">
             {{ year }}
         </h5>
         {% capture written_year %}{{ year }}{% endcapture %}

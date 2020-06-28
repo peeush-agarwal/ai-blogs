@@ -1,4 +1,4 @@
-<div class="card card-post w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-4">
+<div class="d-print-none card card-post w-100 border-top-0 border-left-0 border-right-0 rounded-0 mb-4">
     <div class="card-body px-2 pt-2 pl-2">
         <h4 class="card-title mb-4">
             <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
@@ -23,4 +23,7 @@
         </div>
         <a href="{{ post.url | absolute_url }}">More...</a>
     </div>
+</div>
+<div class="d-none d-print-block">
+    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
 </div>

@@ -36,7 +36,7 @@ $$
 \begin{align*}
 & P(red) = \frac{3}{18} \\
 & P(green) = \frac{5}{18} \\
-& P(red or green) = \frac{3}{18} + \frac{5}{18} = \frac{4}{9}
+& P(\text{red or green}) = \frac{3}{18} + \frac{5}{18} = \frac{4}{9}
 \end{align*}
 $$
 

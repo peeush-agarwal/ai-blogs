@@ -49,23 +49,26 @@ next_post:
   __Number__ | 1 | 2 | 3 | 4 | 5 | 6
   :---: | :---: | :---: | :---: | :---: | :---: | :---:
   __Probability__ | $$ \dfrac{1}{12} $$ | $$ \dfrac{1}{6} $$ | $$ \dfrac{1}{4} $$ | $$ \dfrac{1}{4} $$ | $$ \dfrac{1}{6} $$ | $$ \dfrac{1}{12} $$
-
 + $$
   \begin{align*}
-  \text{Mean }(\mu) & = \sum x \cdot P(x) \\
-  & = 1 \cdot \dfrac{1}{12} + 2 \cdot \dfrac{1}{6} + 3 \cdot \dfrac{1}{4} + 4 \cdot \dfrac{1}{4} + 5 \cdot \dfrac{1}{6} + 6 \cdot \dfrac{1}{12} \\
-  & = 3.5
+  \text{Mean }(\mu) = & \sum x \cdot P(x) \\
+  = & 1 \cdot \dfrac{1}{12} + 2 \cdot \dfrac{1}{6} + 3 \cdot \dfrac{1}{4} \\
+  & + 4 \cdot \dfrac{1}{4} + 5 \cdot \dfrac{1}{6} + 6 \cdot \dfrac{1}{12} \\
+  = & 3.5
   \end{align*}
   $$
-
 + $$
   \begin{align*}
-  Variance & = \sum [ \, (x - \mu)^2 \cdot P(x) ] \, \\
-  & = (1 - 3.5)^2 \cdot \dfrac{1}{12} + (2 - 3.5)^2 \cdot \dfrac{1}{6} + (3 - 3.5)^2 \cdot \dfrac{1}{4} + (4 - 3.5)^2 \cdot \dfrac{1}{4} + (5 - 3.5)^2 \cdot \dfrac{1}{6} + (6 - 3.5)^2 \cdot \dfrac{1}{12} \\
-  & = 1.886
+  Variance = & \sum [ \, (x - \mu)^2 \cdot P(x) ] \, \\
+  = & (1 - 3.5)^2 \cdot \dfrac{1}{12} \\
+  & + (2 - 3.5)^2 \cdot \dfrac{1}{6} \\
+  & + (3 - 3.5)^2 \cdot \dfrac{1}{4} \\
+  & + (4 - 3.5)^2 \cdot \dfrac{1}{4} \\
+  & + (5 - 3.5)^2 \cdot \dfrac{1}{6} \\
+  & + (6 - 3.5)^2 \cdot \dfrac{1}{12} \\
+  = & 1.886
   \end{align*}
   $$
-
 + $$
   \begin{align*}
   \text{standard deviation }(\sigma) & = \sqrt{variance} \\
@@ -121,20 +124,27 @@ next_post:
 + Example:  
   Suppose that from a warehouse of lathe machines, an average of 5 units of machines leave the warehouse per week. At the end of every week, 5 units of machines are bought from the assembler and stored in the warehouse. Having more machines in the warehouse increases the cost of maintenance and storage, and at any given time, the warehouse can store no more than 8 units. Calculate the probability of the following scenario:  
   In a given week, less than 2 machines leave the warehouse. (In this situation, after the new batch of machines arrives from the assembler, the number of machines will exceed the warehouse capacity.)  
-  This can be solved by Poisson distribution:
+  This can be solved by Poisson distribution:  
+  $$ P(x) = \dfrac{\lambda^x \cdot e^{-\lambda}}{x!} $$, $$ \lambda = 5 $$  
+  P(x=0) + P(x=1) will give us the desired probability.  
+  $$ P(x=0) = \dfrac{5^0 \cdot e^{-5}}{0!} = 0.006 $$  
+  $$ P(x=1) = \dfrac{5^1 \cdot e^{-5}}{1!} = 0.033 $$  
+  $$ P(x<2) = 0.006 + 0.033 = 0.039 $$
+  {% comment %}
   $$
   \begin{align*}
-  P(x) & = \frac{\lambda^x \cdot e^{-\lambda}}{x!} \\
-  \text{Here, }\lambda = 5 \\
-  \text{P(x=0) + P(x=1) will give us the desired probability.} \\
-  P(x=0) & = \frac{5^0 \cdot e^{-5}}{0!} \\
-  & = 0.006 \\
-  P(x=1) & = \frac{5^1 \cdot e^{-5}}{1!} \\
-  & = 0.033 \\
-  P(x<2) & = 0.006 + 0.033 \\
-  & = 0.039
+  P(x) = & \frac{\lambda^x \cdot e^{-\lambda}}{x!} \\
+  \text{Here, }\lambda = 5
+  \text{P(x=0) + P(x=1) will give us the desired probability.}
+  P(x=0) = \frac{5^0 \cdot e^{-5}}{0!}
+  = 0.006
+  P(x=1) = \frac{5^1 \cdot e^{-5}}{1!}
+  = 0.033
+  P(x<2) = 0.006 + 0.033
+  = 0.039
   \end{align*}
   $$
+  {% endcomment %}
 
 ### Continuous Probability Distribution
 
