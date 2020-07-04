@@ -5,8 +5,8 @@ tags:
 mathjax: true
 prev_post: 
   title: Normal distribution
-# next_post: 
-#    title: Normal distribution
+next_post: 
+   title: Hypothesis testing
 ---
 
 ## Terminology
