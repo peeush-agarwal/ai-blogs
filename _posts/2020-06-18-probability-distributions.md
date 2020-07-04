@@ -3,6 +3,7 @@ title: Probability distributions
 tags:
   - statistics
   - probability-distributions
+category: 'Statistics and probability'
 mathjax: true
 prev_post: 
   title: Joint probability and conditional probablity

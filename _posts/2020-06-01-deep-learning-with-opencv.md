@@ -3,6 +3,7 @@ title: Deep Learning with OpenCV
 tags:
   - open-cv
   - deep-learning
+category: 'Deep Learning'
 ---
 
 Deep learning with OpenCV using its inbuilt `dnn` module

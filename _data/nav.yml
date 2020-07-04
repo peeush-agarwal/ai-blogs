@@ -3,6 +3,13 @@
 
 - title: Posts
   href: list/posts.html
+  children:
+    - name: 'All posts'
+      href: list/posts.html
+    - name: 'Statistics and probability'
+      href: list/stats_prob.html
+    - name: 'Deep Learning'
+      href: list/dl.html
 
 - title: Projects
   href: list/projects.html

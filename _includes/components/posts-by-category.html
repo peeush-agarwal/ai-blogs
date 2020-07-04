@@ -1,0 +1,10 @@
+{% assign _posts = site.posts | where: "category", page.show_category | sort: "date" %}
+
+<ul class="list-group list-group-flush">
+    {% for post in _posts %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+        <span class="text-muted">{{ post.date | date_to_string }}</span>
+    </li>
+    {% endfor %}
+</ul>

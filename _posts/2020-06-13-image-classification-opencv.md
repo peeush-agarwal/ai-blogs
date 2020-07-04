@@ -9,6 +9,7 @@ tags:
   - open-cv
   - deep-learning
   - image-classification
+category: 'Deep Learning'
 comments_id: 1
 ---
 

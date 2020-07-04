@@ -3,6 +3,7 @@ title: Joint probability and conditional probablity
 tags:
   - statistics
   - probability-basics
+category: 'Statistics and probability'
 mathjax: true
 prev_post: 
   title: Introduction to probability

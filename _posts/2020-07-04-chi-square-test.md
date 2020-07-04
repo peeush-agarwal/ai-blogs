@@ -3,6 +3,7 @@ title: Chi-square Test
 tags:
   - statistics
   - hypothesis-testing
+category: 'Statistics and probability'
 mathjax: true
 prev_post: 
   title: T-Test
