@@ -2,6 +2,7 @@
 title: Hypothesis testing
 tags:
   - statistics
+  - hypothesis-testing
 mathjax: true
 prev_post: 
   title: Inferential statistics
@@ -33,12 +34,13 @@ next_post:
   + If both of above conditions are satisfied, you go for a __normal distribution__ or __Z-test__; otherwise, you use the __T-test__.
 + Step 3: Determine the test statistic.
   + This is a value that is to be calculated from some given data, which is then used to compare the results arrived at with the tabular values.
-  + The test statistic for a normal distribution or Z-test is defined as $$ Z = \dfrac{x - \mu}{\frac{\sigma}{\sqrt{n}}} $$.
+  + The test statistic for a normal distribution or Z-test is defined as $$ Z = \dfrac{\overline{x} - \mu}{\frac{\sigma}{\sqrt{n}}} $$.
   + Here,
-    + `x` is the process mean,
-    + `$$ \mu $$` is the population mean,
-    + `$$ \sigma $$` is the standard deviation,
+    + $$ \overline{x} $$ is the process mean,
+    + $$ \mu $$ is the population mean,
+    + $$ \sigma $$ is the standard deviation,
     + `n` is the sample size.
++ [Refer here](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTest-Means-Proportions/BS704_HypothesisTest-Means-Proportions3.html)
 + Example: Google claims that its internet browser 'Chrome' is the best in the industry as it has an optimum boot time of only 250 ms, with a standard deviation of 9 ms. Sam, a tech geek, wanted to test the claim of Google. So, he randomly collected boot time data of 165 devices of Chrome and got a sample mean of 247 ms.
   + Step 1: Define Hypothesis
     + $$ H_0: \mu = 250ms $$
@@ -77,11 +79,13 @@ __Fail to reject $$ H_0 $$__ | None | Type 2 error
 ### Type 1 error
 
 + This is where a good hypothesis is rejected.
++ $$ H_0 $$ is True, but it is rejected.
 + It is also called the __consumer's loss__ because it results in the consumer discarding a perfectly good material/service, causing his organisation a loss of time as well as monetary resources
 + Type 1 error is equal to __$$ \alpha $$, the level of significance.__
 
 ### Type 2 error
 
 + This is where a false hypothesis is accepted.
++ $$ H_0 $$ is False, but it is accepted.
 + It is also called the __producer's gain__ as it results in a faulty batch being produced by them to be accepted by a customer.
 + Type 2 error is denoted by __$$ \beta $$__, where (1 - $$ \beta $$) is also caleed the __power of the statistical test__.

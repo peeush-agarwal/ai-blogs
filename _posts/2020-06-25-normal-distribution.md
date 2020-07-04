@@ -2,6 +2,7 @@
 title: Normal distribution
 tags:
   - statistics
+  - probability-distributions
 mathjax: true
 prev_post: 
   title: Probability distributions

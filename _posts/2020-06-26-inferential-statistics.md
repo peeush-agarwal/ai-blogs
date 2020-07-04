@@ -2,6 +2,7 @@
 title: Inferential statistics
 tags:
   - statistics
+  - sampling
 mathjax: true
 prev_post: 
   title: Normal distribution

@@ -2,11 +2,12 @@
 title: Chi-square Test
 tags:
   - statistics
+  - hypothesis-testing
 mathjax: true
 prev_post: 
   title: T-Test
-# next_post: 
-#    title: 
+next_post: 
+   title: p-Value approach
 ---
 
 Following are the 2 types of Chi-square test:
