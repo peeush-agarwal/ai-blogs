@@ -19,6 +19,7 @@ Following are the 2 types of Chi-square test:
 ## Chi-square test of independence
 
 This is used to determine if there is a significant relationship between 2 nominal (categorical) variables.
+
 <!--more-->
 
 For example, a researcher wants to examine the relationship between gender (male vs female) and chances of getting Alzheimer's disease. The chi-square test of independence can be used to examine this relationship.

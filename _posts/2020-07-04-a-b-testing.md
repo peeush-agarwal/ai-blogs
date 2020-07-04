@@ -18,6 +18,7 @@ prev_post:
   + the other experiencing variation B
   A/B testing is a tool in the hands of managers, which they can use to understand the user behavior in two competing scenarios. This helps them select the best way in which they can make the customers complete the activities the website wants them to.
 + A/B testing helps you find out what you could change in the current product to increase user conversion rate.
+
 <!--more-->
 
 There are six major steps involved in A/B testing:
