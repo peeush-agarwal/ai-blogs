@@ -20,7 +20,6 @@ next_post:
   Size | n | N
   Mean | $$ \widetilde{x} $$ | $$ \mu $$
   Standard Deviation | s | $$ \sigma $$
-
 <!--more-->
 
 ### Types of Sampling
