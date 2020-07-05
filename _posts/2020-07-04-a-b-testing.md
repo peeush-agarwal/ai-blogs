@@ -7,8 +7,8 @@ category: 'Statistics and probability'
 mathjax: true
 prev_post: 
   title: p-Value approach
-# next_post: 
-#    title: 
+next_post: 
+   title: F-Test
 ---
 
 + The process of testing original and alternate versions of a website is known as A/B testing

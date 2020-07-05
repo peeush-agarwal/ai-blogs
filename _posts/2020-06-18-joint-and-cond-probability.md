@@ -68,4 +68,4 @@ $$ P(A \vert B) = \frac{P(B \vert A) \cdot P(A)}{P(B)} $$
 
 __Generic formula__
 
-$$ P(A_i \vert B) = \frac{P(B \vert A_i) \cdot P(A_i)}{\sum_{i=1}^{n}P(B \vert A_i) \cdot P(A_i)} $$
+$$ P(A_i \vert B) = \frac{P(B \vert A_i) \cdot P(A_i)}{\sum_{i=1}^{n}{P(B \vert A_i) \cdot P(A_i)}} $$
