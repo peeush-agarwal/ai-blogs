@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<h1 class="border border-top-0 border-right-0 border-left-0 mb-3 pb-2">
+    {{ page.title }}
+</h1>
+
+<div class="d-md-block d-lg-none">
+    {% include components/post-meta.html %}
+</div>
+
+<div class="accordion" id="accordionQnA">
+</div>
+
+<div class="d-none">
+    {{ content }}
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var tpl =
+            "<div class='card mb-3'>\
+    <div class='card-header' id='heading[idx]'>\
+        <h2 class='mb-0'>\
+            <button class='btn text-warning' type='button' data-toggle='collapse' data-target='#collapse[idx]'\
+                aria-expanded='true' aria-controls='collapse[idx]'>\
+                [ques]\
+            </button>\
+        </h2>\
+    </div>\
+    <div id='collapse[idx]' class='collapse hide' aria-labelledby='heading[idx]'>\
+        <div class='card-body'>\
+            [ans]\
+        </div>\
+    </div>\
+</div>";
+        var header_tpl =
+            "<li class='nav-item'>\
+                <a class='nav-link mb-1' href='#header[idx]'>[name]</a>\
+            </li>";
+
+        $("h2").each(function (idx, h2) {
+            $(h2).attr("id", "header" + idx);
+            var ques = $(h2).text().trim();
+
+            var head_string = header_tpl.replace(/\[idx\]/g, idx)
+                .replace("[name]", ques);
+            var header = $(head_string);
+            $(".header-list").append(header);
+
+            var ans = $(h2).next("p").text().trim();
+            var dom_string = tpl.replace(/\[idx\]/g, idx)
+                .replace("[ques]", ques)
+                .replace("[ans]", ans);
+            var content = $(dom_string);
+            $("#accordionQnA").append(content);
+        });
+    })
+</script>
