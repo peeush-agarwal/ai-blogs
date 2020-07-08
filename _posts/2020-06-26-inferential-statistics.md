@@ -25,7 +25,7 @@ next_post:
   
 <!--more-->
 
-### Types of Sampling
+## Types of Sampling
 
 + __Random sampling__: In this type of sampling, each element in the population has same probability of getting selected in the sample.
   + _Simple random sampling with replacement_: In this, to select a sample of size n, you select an element from the population and then return it to the population. This procedure is repeated n times. Thus each element from the population can be selected multiple times. This method is used when population size is small.

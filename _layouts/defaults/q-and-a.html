@@ -2,9 +2,12 @@
 layout: default
 ---
 
-<h1 class="border border-top-0 border-right-0 border-left-0 mb-3 pb-2">
-    {{ page.title }}
-</h1>
+<div class="accordion-option border border-top-0 border-right-0 border-left-0 mb-3 pb-2 d-flex align-items-center sticky-top space-before">
+    <h1 class="title">
+        {{ page.title }}
+    </h1>
+    <a href="javascript:void(0)" class="toggle-accordion d-print-none ml-auto" accordion-id="#accordionQnA"></a>
+</div>
 
 <div class="d-md-block d-lg-none">
     {% include components/post-meta.html %}
@@ -21,27 +24,25 @@ layout: default
     $(document).ready(function () {
         var tpl =
             "<div class='card mb-3'>\
-    <div class='card-header' id='heading[idx]'>\
-        <h2 class='mb-0'>\
-            <button class='btn text-warning' type='button' data-toggle='collapse' data-target='#collapse[idx]'\
-                aria-expanded='true' aria-controls='collapse[idx]'>\
-                [ques]\
-            </button>\
-        </h2>\
-    </div>\
-    <div id='collapse[idx]' class='collapse hide' aria-labelledby='heading[idx]'>\
-        <div class='card-body'>\
-            [ans]\
-        </div>\
-    </div>\
-</div>";
+                <div class='card-header' id='heading[idx]'>\
+                    <a href='#' class='card-link text-warning mb-0 anchor space-before'\
+                        data-toggle='collapse' data-target='#collapse[idx]'\
+                        aria-expanded='true' aria-controls='collapse[idx]'>\
+                        [ques]\
+                    </a>\
+                </div>\
+                <div id='collapse[idx]' class='collapse hide' aria-labelledby='heading[idx]'>\
+                    <div class='card-body'>\
+                        [ans]\
+                    </div>\
+                </div>\
+            </div>";
         var header_tpl =
             "<li class='nav-item'>\
-                <a class='nav-link mb-1' href='#header[idx]'>[name]</a>\
+                <a class='nav-link mb-1' href='#heading[idx]'>[name]</a>\
             </li>";
 
         $("h2").each(function (idx, h2) {
-            $(h2).attr("id", "header" + idx);
             var ques = $(h2).text().trim();
 
             var head_string = header_tpl.replace(/\[idx\]/g, idx)
@@ -49,12 +50,53 @@ layout: default
             var header = $(head_string);
             $(".header-list").append(header);
 
-            var ans = $(h2).next("p").text().trim();
+            //var ans = $(h2).nextUntil("h2").wrap('<div></div>').parent().html();
+            var ans = fetchAnswer(h2);
             var dom_string = tpl.replace(/\[idx\]/g, idx)
                 .replace("[ques]", ques)
                 .replace("[ans]", ans);
             var content = $(dom_string);
             $("#accordionQnA").append(content);
         });
-    })
+
+        function fetchAnswer(h2Element) {
+            var ans = '';
+            $(h2Element).nextUntil("h2").each(function (idx, elem) {
+                var innerHtml = $(elem).wrap("<div></div>").parent().html();
+                ans += innerHtml;
+            });
+            return ans;
+        };
+
+
+        $(".btn-primary").click(function () {
+
+            if ($(this).data("closedAll")) {
+                $(".collapse").collapse("show");
+            }
+            else {
+                $(".collapse").collapse("hide");
+            }
+
+            // save last state
+            $(this).data("closedAll", !$(this).data("closedAll"));
+        });
+
+        // init with all closed
+        $(".toggle-accordion").data("closedAll", true);
+
+        $(".toggle-accordion").on("click", function () {
+            $(this).toggleClass("active");
+
+            if ($(this).data("closedAll")) {
+                $(".collapse").collapse("show");
+            }
+            else {
+                $(".collapse").collapse("hide");
+            }
+
+            // save last state
+            $(this).data("closedAll", !$(this).data("closedAll"));
+        });
+    });
 </script>

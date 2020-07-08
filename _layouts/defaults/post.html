@@ -54,7 +54,8 @@ layout: default
             }
         }
         $(selector).each(function (idx, elem) {
-            $(elem).attr("id", "header" + idx)
+            $(elem).attr("class", "anchor space-before");
+            $(elem).attr("id", "header" + idx);
             var name = $(elem).text().trim()
             var dom_string = tpl.replace("[name]", name).replace("[idx]", idx)
             var header = $(dom_string)

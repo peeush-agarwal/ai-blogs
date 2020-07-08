@@ -89,5 +89,5 @@ __Fail to reject $$ H_0 $$__ | None | Type 2 error
 + This is where a false hypothesis is accepted.
 + $$ H_0 $$ is False, but it is accepted.
 + It is also called the __producer's gain__ as it results in a faulty batch being produced by them to be accepted by a customer.
-+ Type 2 error is denoted by __$$ \beta $$__, where (1 - $$ \beta $$) is also caleed the __power of the statistical test__.
++ Type 2 error is denoted by __$$ \beta $$__, where (1 - $$ \beta $$) is also called the __power of the statistical test__.
 + **Power of statistical test** is inversely proportional to the probability of making Type-2 error. Therefore, 1 - $$ \beta $$.
