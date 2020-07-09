@@ -27,6 +27,8 @@ prev_post:
 + **Bivariate analysis**: It is used to find relationships between two different variables. For example, finding the relationship between Employee satisfaction level and income.
 + **Multivariate analysis**: It is the analysis of three or more variables. For example, analyse the factors that could have affected the lower sales of a newly launched product.
 
+<!--more-->
+
 ## Explain the power of statistical tests?
 
 The power of a statistical test is inversely proportional to the probability of making a Type-2 error ($$ \beta $$); so, it is equal to $$ 1 - \beta $$. [More...]({{ site.baseurl }}{% link _posts/2020-06-28-hypothesis-testing.md %}#header1)

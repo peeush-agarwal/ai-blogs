@@ -9,14 +9,14 @@ layout: default
     <a href="javascript:void(0)" class="toggle-accordion d-print-none ml-auto" accordion-id="#accordionQnA"></a>
 </div>
 
-<div class="d-md-block d-lg-none">
+<div class="d-md-block d-lg-none d-print-none">
     {% include components/post-meta.html %}
 </div>
 
-<div class="accordion" id="accordionQnA">
+<div class="accordion d-print-none" id="accordionQnA">
 </div>
 
-<div class="d-none">
+<div class="d-none d-print-block">
     {{ content }}
 </div>
 
