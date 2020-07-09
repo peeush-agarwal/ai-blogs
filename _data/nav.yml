@@ -8,6 +8,8 @@
       href: list/posts.html
     - name: 'Statistics and probability'
       href: list/stats_prob.html
+    - name: 'Machine Learning'
+      href: list/ml.html
     - name: 'Deep Learning'
       href: list/dl.html
 
