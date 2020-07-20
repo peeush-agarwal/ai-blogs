@@ -22,6 +22,8 @@ Captures complex patterns which humans cannot identify. | May not capture comple
 No bias | Bias
 Eg. Time-series forecasting | Eg. Delphi method
 
+<!--more-->
+
 ## Terminologies
 
 + **Time-series data**: The data that has a time-component involved in it is termed as a time-series data. For ex: the number of orders made on a food ordering app per day is a time-series data.
