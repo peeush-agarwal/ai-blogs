@@ -136,7 +136,7 @@ We can detect and treat outliers in the time-series with following methods:
 3. **Histogram:** Simply plotting a histogram can also reveal the outliers - basically the extreme values with low frequencies visible in the plot.
    ![Histogram]({{ site.baseurl }}{% link assets/images/time_series_forecast/Outliers_Histogram.png %})
 
-### 4. Model the data
+### 4. Build and evaluate the forecast models
 
 Before modelling the data, time series need to be decomposed which can be done in two ways:
 
@@ -144,3 +144,38 @@ Before modelling the data, time series need to be decomposed which can be done i
   When the magnitude of the seasonal pattern in the data does not directly correlate with the value of the series, the additive seasonal decomposition may be a better choice to split the time series so that the residual does not have any pattern.
 + **Multiplicative Seasonal Decomposition**
   When the magnitude of the seasonal pattern in the data increases with an increase in data values and decreases with a decrease in the data values, the multiplicative seasonal decomposition may be a better choice.
+
+To build a model and forecast, we use **Smoothing techniques**. Smoothing techniques remove the noise components and retain the systematic patterns of the time series i.e. level, trend and seasonality.
+
+There are differences between Time-series and Regression:
+
++ Time-series have a strong temporal (time-based) dependence - each of these data sets essentially consists of a series of time-stamped observations i.e. each observation is tied to a specific time instance. Thus, unlike regression, the order of the data is important in a time-series.
++ In a time-series, you are not concerned with the causal relationship between the response and explanatory variables. The cause behind the changes in the response variable is very much a black box.
+
+#### Forecasting methods
+
+1. **Naive method**
+
+   Forecast = Last month sales
+   ![Naive forecast method]({{ site.baseurl }}{% link assets/images/time_series_forecast/Naive_Forecast_method.png %})
+
+2. **Simple average method**
+
+   Forecast = Average of all past months' sales
+   ![Simple Average forecast method]({{ site.baseurl }}{% link assets/images/time_series_forecast/SimpleAvg_Forecast_Method.png %})
+
+#### Error measures
+
+Following are the error measures in Time-series forecasting:
+
+1. **Mean Forecast Error (MFE):** In this naive method, you simply subtract the actual values of the dependent variable, i.e., 'y' with the forecasted values of 'y'. This can be represented using the equation below.  
+   $$ MFE = \dfrac{1}{n}\sum_{i=1}^n (y_{actual} - \widehat{y}_{forecast}) $$
+2. **Mean Absolute Error (MAE):** Since MFE might cancel out a lot of overestimated and underestimated forecasts, hence measuring the mean absolute error or MAE makes more sense as in this method, you take the absolute values of the difference between the actual and forecasted values.  
+   $$ MAE = \dfrac{1}{n}\sum_{i=1}^n |y_{actual} - \widehat{y}_{forecast}| $$
+3. **Mean Absolute Percentage Error (MAPE):** The problem with MAE is that even if you get an error value, you have nothing to compare it against. For example, if the MAE that you get is 1.5, you cannot tell just on the basis of this number whether you have made a good forecast or not. If the actual values are in single digits, this error of 1.5 is obviously high but if the actual values are, say in the order of thousands, an error of 1.5 indicates a good forecast. So in order to capture how the forecast is doing based upon the actual values, you evaluate mean absolute error where you take the mean absolute error (MAE) as the percentage of the actual values of 'y'.  
+   $$ MAPE = \dfrac{100}{n}\sum_{i=1}^n \vert\dfrac{y_i - \widehat{y}_i}{y_i}\vert $$
+4. **Mean Squared Error (MSE):** The idea behind mean squared error is the same as mean absolute error, i.e., you want to capture the absolute deviations so that the negative and positive deviations do not cancel each other out. In order to achieve this, you simply square the error values, sum them up and take their average. This is known as *mean squared error or MSE* which can be represented using the equation below.  
+   $$ MSE = \dfrac{1}{n}\sum_{i=1}^n (y_{actual} - \widehat{y}_{predicted})^2 $$
+5. **Root Mean Squared Error (RMSE):** Since the error term you get from MSE is not in the same dimension as the target variable 'y' (it is squared), you deploy a metric known as RMSE wherein you take the square root of the MSE value obtained.  
+   $$ RMSE = \sqrt{\dfrac{1}{n}\sum_{i=1}^n (y_{actual} - \widehat{y}_{predicted})^2} $$
+   
